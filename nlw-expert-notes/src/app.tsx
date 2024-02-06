@@ -1,6 +1,6 @@
 export default function App() {
   return (
-    <h1 className="bg-green-600">
+    <h1>
       Hello World
     </h1>
   )
