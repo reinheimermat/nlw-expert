@@ -12,6 +12,8 @@ export default function App() {
           className='w-full bg-transparent text-3xl font-semibold outline-none tracking-tight place-holder:text-slate-500'
         />
       </form>
+
+      <div className='h-px bg-slate-700' />
     </main>
   )
 }
