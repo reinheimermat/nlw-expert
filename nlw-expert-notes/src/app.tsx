@@ -8,6 +8,16 @@ export default function App() {
     { id: 1, date: new Date(), content: 'hello world' }
   ]);
 
+  function onNoteCreated(content: string) {
+    const newNote = {
+      id:  Math.random(),
+      date: new Date(),
+      content,
+    }
+
+    setNotes([newNote, ...notes]);
+  }
+
   return (
     <main className='mx-auto max-w-6xl my-12 space-y-6'>
       <img src={logo} alt="NLW Expert" />
@@ -23,7 +33,7 @@ export default function App() {
       <div className='h-px bg-slate-700' />
 
       <section className='grid grid-cols-3 gap-6 auto-rows-[250px]'>
-        <NewNoteCard />
+        <NewNoteCard onNoteCreated={onNoteCreated} />
         
         {notes.map(note => {
           return <NoteCard note={note} />
